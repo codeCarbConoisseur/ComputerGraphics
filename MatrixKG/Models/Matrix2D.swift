@@ -21,8 +21,7 @@ class Model2D {
         self.Vertices = vertices
         self.Edges = edges
         self.InitialVertices = vertices
-        let m = Matrix(numberOfRows: 0, numberOfCols: 0, list: [Double]())
-        self.CumulativeAT = m.identity()
+        self.CumulativeAT = identity()
     }
     
     // MARK: Getters:
@@ -40,11 +39,11 @@ class Model2D {
     
     // MARK: Public Funcs:
     func getVertexX(xNumber: Int) -> Double {
-        return Vertices[1,xNumber]/Vertices[3,xNumber]
+        return Vertices[0,xNumber]/Vertices[2,xNumber]
     }
     
     func getVertexY(yNumber: Int) -> Double {
-        return Vertices[2,yNumber]/Vertices[3,yNumber]
+        return Vertices[1,yNumber]/Vertices[2,yNumber]
     }
     
     func apply(transformation: Matrix) {

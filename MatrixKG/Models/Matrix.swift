@@ -12,15 +12,15 @@ postfix operator ^
 typealias Cell = Double
 
 // MARK: Public func in protocol:
-protocol MatrixProtocol: class {
-    func identity() -> Matrix
-    func rotation(t: Int) -> Matrix
-    func rotation(c: Int, s: Int) -> Matrix
-    func scaling(kx: Double, ky: Double) -> Matrix
-    func mappingX() -> Matrix
-    func mappingY() -> Matrix
-    func translation(x: Double, y:Double) -> Matrix
-}
+//protocol MatrixProtocol: class {
+//    func identity() -> Matrix
+//    func rotation(t: Int) -> Matrix
+//    func rotation(c: Int, s: Int) -> Matrix
+//    func scaling(kx: Double, ky: Double) -> Matrix
+//    func mappingX() -> Matrix
+//    func mappingY() -> Matrix
+//    func translation(x: Double, y:Double) -> Matrix
+//}
 
 class Matrix: CustomStringConvertible {
     
@@ -42,7 +42,6 @@ class Matrix: CustomStringConvertible {
         }
         return dsc
     }
-    
     // MARK: Inits:
     public convenience init (numberOfRows: Int, numberOfCols: Int, list: [Double]) {
         self.init(numberOfRows: numberOfRows, numberOfCols: numberOfCols)
@@ -53,6 +52,14 @@ class Matrix: CustomStringConvertible {
                 index+=1
             }
         }
+    }
+    
+    public func getRows() -> Int {
+        return self.rows
+    }
+    
+    public func getCols() -> Int {
+        return self.cols
     }
     
     public convenience init (size: Int, list: [Double]) {
@@ -145,80 +152,6 @@ class Matrix: CustomStringConvertible {
     
 }
 
-
-// MARK: Public Funcs:
-extension Matrix: MatrixProtocol {
-    
-    
-    func translation(x: Double, y:Double) -> Matrix {
-        let list:[Double] = [
-            1,0,x,
-            0,1,y,
-            0,0,1
-        ]
-        return Matrix(size: 3, list: list)
-    }
-    
-    func identity() -> Matrix {
-        let list:[Double] = [
-            1,0,0,
-            0,1,0,
-            0,0,1
-        ]
-        let matrix = Matrix(size: 3, list: list)
-        return matrix
-    }
-    
-    func rotation(t: Int) -> Matrix {
-        let list:[Double] = [
-            cos(Double(t)), -sin(Double(t)), 0,
-            sin(Double(t)), cos(Double(t)), 0,
-            0, 0, 1
-        ]
-        return  Matrix(size: 3, list: list)
-    }
-    
-    func rotation(c: Int, s: Int) -> Matrix {
-        let doubleC = Double(c), doubleS = Double(s)
-        let square = sqrt(doubleC*doubleC+doubleS*doubleS)
-        let cosC = doubleC/square
-        let sinS = doubleS/square
-        let list:[Double] = [
-            cosC, -sinS, 0,
-            sinS, cosC, 0,
-            0, 0, 1
-        ]
-        return Matrix(size: 3, list: list)
-    }
-    
-    func scaling(kx: Double, ky: Double) -> Matrix {
-        let list:[Double] = [
-            kx, 0, 0,
-            0, ky, 0,
-            0, 0, 1
-        ]
-        return Matrix(size: 3, list: list)
-    }
-    
-    func mappingX() -> Matrix{
-        let list:[Double] = [
-            1,0,0,
-            0,-1,0,
-            0,0,1
-        ]
-        return Matrix(size: 3, list: list)
-    }
-    
-    func mappingY() -> Matrix{
-        let list:[Double] = [
-            -1,0,0,
-            0,1,0,
-            0,0,1
-        ]
-        return Matrix(size: 3, list: list)
-    }
-    
-}
 
 extension Matrix {
     // MARK: Subscripts:

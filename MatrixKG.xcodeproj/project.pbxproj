@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6094CC6F2382D5E9000E1DE5 /* gitExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6094CC6E2382D5E9000E1DE5 /* gitExample.swift */; };
+		60169C41238BCA21004CFC35 /* drawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60169C40238BCA21004CFC35 /* drawingView.swift */; };
+		60169C46238C1B1D004CFC35 /* Vertices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 60169C44238C1B1C004CFC35 /* Vertices.txt */; };
+		60169C47238C1B1D004CFC35 /* Edges.txt in Resources */ = {isa = PBXBuildFile; fileRef = 60169C45238C1B1D004CFC35 /* Edges.txt */; };
+		6023254223953BE90070FD7F /* AffineTransforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6023254123953BE90070FD7F /* AffineTransforms.swift */; };
+		605B08772391230A0035CCF8 /* MyCustomFigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B08762391230A0035CCF8 /* MyCustomFigure.swift */; };
 		6094CC712382F1B8000E1DE5 /* Matrix2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6094CC702382F1B8000E1DE5 /* Matrix2D.swift */; };
 		60B6EAC72381970A00AC8E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6EAC62381970A00AC8E84 /* AppDelegate.swift */; };
 		60B6EAC92381970A00AC8E84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6EAC82381970A00AC8E84 /* SceneDelegate.swift */; };
@@ -19,7 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6094CC6E2382D5E9000E1DE5 /* gitExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitExample.swift; sourceTree = "<group>"; };
+		60169C40238BCA21004CFC35 /* drawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingView.swift; sourceTree = "<group>"; };
+		60169C44238C1B1C004CFC35 /* Vertices.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vertices.txt; sourceTree = "<group>"; };
+		60169C45238C1B1D004CFC35 /* Edges.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Edges.txt; sourceTree = "<group>"; };
+		6023254123953BE90070FD7F /* AffineTransforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffineTransforms.swift; sourceTree = "<group>"; };
+		605B08762391230A0035CCF8 /* MyCustomFigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomFigure.swift; sourceTree = "<group>"; };
 		6094CC702382F1B8000E1DE5 /* Matrix2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix2D.swift; sourceTree = "<group>"; };
 		60B6EAC32381970A00AC8E84 /* MatrixKG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixKG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B6EAC62381970A00AC8E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6023254323953C160070FD7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60B6EACA2381970A00AC8E84 /* ViewController.swift */,
+				60169C40238BCA21004CFC35 /* drawingView.swift */,
+				605B08762391230A0035CCF8 /* MyCustomFigure.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6023254423953C250070FD7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60B6EADA238197FC00AC8E84 /* Matrix.swift */,
+				6094CC702382F1B8000E1DE5 /* Matrix2D.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		60B6EABA2381970A00AC8E84 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +89,17 @@
 		60B6EAC52381970A00AC8E84 /* MatrixKG */ = {
 			isa = PBXGroup;
 			children = (
+				6023254423953C250070FD7F /* Models */,
+				6023254323953C160070FD7F /* Views */,
 				60B6EAC62381970A00AC8E84 /* AppDelegate.swift */,
 				60B6EAC82381970A00AC8E84 /* SceneDelegate.swift */,
-				60B6EACA2381970A00AC8E84 /* ViewController.swift */,
 				60B6EACC2381970A00AC8E84 /* Main.storyboard */,
 				60B6EACF2381970D00AC8E84 /* Assets.xcassets */,
 				60B6EAD12381970D00AC8E84 /* LaunchScreen.storyboard */,
 				60B6EAD42381970D00AC8E84 /* Info.plist */,
-				60B6EADA238197FC00AC8E84 /* Matrix.swift */,
-				6094CC6E2382D5E9000E1DE5 /* gitExample.swift */,
-				6094CC702382F1B8000E1DE5 /* Matrix2D.swift */,
+				60169C45238C1B1D004CFC35 /* Edges.txt */,
+				60169C44238C1B1C004CFC35 /* Vertices.txt */,
+				6023254123953BE90070FD7F /* AffineTransforms.swift */,
 			);
 			path = MatrixKG;
 			sourceTree = "<group>";
@@ -137,6 +165,8 @@
 				60B6EAD32381970D00AC8E84 /* LaunchScreen.storyboard in Resources */,
 				60B6EAD02381970D00AC8E84 /* Assets.xcassets in Resources */,
 				60B6EACE2381970A00AC8E84 /* Main.storyboard in Resources */,
+				60169C47238C1B1D004CFC35 /* Edges.txt in Resources */,
+				60169C46238C1B1D004CFC35 /* Vertices.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6094CC712382F1B8000E1DE5 /* Matrix2D.swift in Sources */,
-				6094CC6F2382D5E9000E1DE5 /* gitExample.swift in Sources */,
+				6023254223953BE90070FD7F /* AffineTransforms.swift in Sources */,
+				60169C41238BCA21004CFC35 /* drawingView.swift in Sources */,
+				605B08772391230A0035CCF8 /* MyCustomFigure.swift in Sources */,
 				60B6EADB238197FC00AC8E84 /* Matrix.swift in Sources */,
 				60B6EACB2381970A00AC8E84 /* ViewController.swift in Sources */,
 				60B6EAC72381970A00AC8E84 /* AppDelegate.swift in Sources */,

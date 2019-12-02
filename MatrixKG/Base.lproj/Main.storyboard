@@ -15,21 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ghbdtn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g7-fa-ckZ">
-                                <rect key="frame" x="243" y="421" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4v-3S-7Mc">
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Item" id="xWs-on-sUq"/>
+                                    <tabBarItem title="Item" id="07S-qU-Led"/>
+                                    <tabBarItem title="Item" id="Ngx-0y-xvq"/>
+                                    <tabBarItem title="Item" id="Lfw-Fk-qI2"/>
+                                    <tabBarItem title="Item" id="6wq-DP-dYO"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X4v-3S-7Mc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7sN-dI-iem"/>
+                            <constraint firstItem="X4v-3S-7Mc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lhg-rp-xBp"/>
+                            <constraint firstItem="X4v-3S-7Mc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vTI-1p-MUN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="fifthTabBarItem" destination="6wq-DP-dYO" id="fW0-9N-44f"/>
+                        <outlet property="firstTabBarItem" destination="xWs-on-sUq" id="EfD-hZ-euH"/>
+                        <outlet property="fourthTabBarItem" destination="Lfw-Fk-qI2" id="qTK-1C-ZBz"/>
+                        <outlet property="myTabBar" destination="X4v-3S-7Mc" id="UXZ-KP-UxS"/>
+                        <outlet property="secondTabBarItem" destination="07S-qU-Led" id="zgJ-3T-erw"/>
+                        <outlet property="thirdTabBarItem" destination="Ngx-0y-xvq" id="EWe-Pd-XsU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
